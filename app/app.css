@@ -52,6 +52,7 @@ body {
 .texto {
     text-align: center;
 }
+
 .texto p {
     line-height: 20px;
     font-size: 14px;
@@ -101,6 +102,7 @@ body {
 }
 .bg-img {
     vertical-align: middle;
+    width: 100%;
 }
 .section__texto {
     padding: 50px 0;
@@ -190,10 +192,8 @@ body {
 .section:last-child .formulario {
     margin: 0 30px;
 }
-.section:last-child [type="email"] {
-    border: none;
-    box-shadow: 0px 0px 5px #0002;
-    padding: 10px;
+.section:last-child .formulario small{
+    margin-top: -50px;
 }
 .section:last-child .btn {
     font-size: 12px;
@@ -212,7 +212,7 @@ body {
     margin-top: 40px;
 }
 address p {
-    display: inline-flex;
+    display: flex;
     gap: 20px;
     margin-top: 0;
 }
@@ -233,4 +233,210 @@ address p {
     border: 1px solid var(--blanco);
     padding: 9px 10px;
     border-radius: 100px;
+}
+.bg-desktop {
+    display: none;
+}
+.formulario{
+    position: relative;
+}
+small{
+    color: #b94343;
+    position: absolute;
+    top: 40px;
+}
+#formulario__registro-2  small{
+    color: var(--blanco);
+    position: relative;
+    top: -45px;     
+}
+
+.btn-azul {
+    padding: 13px;
+}
+.btn-azul:last-child {
+    font-size: 14px;
+}
+.mensaje {
+    display: none;
+}
+.campo-incorrecto {
+    gap: 30px;
+}
+.campo-incorrecto [type="email"] {
+    border: 1px solid #b94343;
+    box-shadow: 0px 0px 5px #0002;
+}
+.campo-incorrecto .mensaje {
+    display: block;
+}
+@media screen and (min-width:600px){
+    .bg-mobile{
+        display: none;
+    }
+    .bg-desktop {
+        display: block;
+    }
+    .hero__texto {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .hero__texto .texto {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        text-align: left;
+    }
+    .hero__texto .texto h1 {
+        font-size: 1.5em;
+    }
+    .texto p {
+        font-size: 13px;
+    }
+
+    .hero__texto .formulario [type="email"] {
+        width: 60%;
+    }
+    .hero__texto .formulario .btn {
+        width: 40%;
+    }
+    .section__texto {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 100px;
+        align-items: center;
+    }
+    .section__texto .texto {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        text-align: left;
+    }
+    .section:first-child .texto h2 {
+        font-size: 1.5em;
+    }
+
+    .section:last-child .texto h2 {
+        font-size: 1.3em;
+    }
+    .card {
+        margin: 0;
+        margin-top: 50px;
+    }
+    .footer__texto {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5%;
+    }
+    .footer__texto ul {
+        margin: 0;
+    }
+    .btn {
+        cursor: pointer;
+        transition: opacity ease .5s;
+    }
+    .btn-azul:hover{
+        opacity: .4;
+        transition: opacity ease .5s;
+    }
+    .enlace {
+        cursor: pointer;
+        transition: color ease .5s;        
+    }
+    .enlace:hover{
+        transition: color, border ease .5s;        
+        color: #7dd6c4;
+        border-bottom: 1px solid #7dd6c4;
+    }
+    .footer__texto li{
+        cursor: pointer;
+        transition: color ease .5s;
+    }
+    .footer__texto li:hover{
+        color: var(--azul);
+        transition: color ease .5s;
+    }
+    .redes .fab {
+        cursor: pointer;
+        transition: color, border ease .5s;
+    }
+    .redes .fab:hover {
+        border: 1px solid var(--azul);
+        color: var(--azul);
+        transition: color, border ease .5s;
+    }
+}
+@media screen and (min-width:1000px){
+    .contenedor {
+        padding: 50px 60px;
+        position: relative;
+    }
+    .nav .logo {
+        width: 130px;
+    }
+    .nav .enlace-box {
+        gap: 50px;
+    }
+    .nav .enlace-box a {
+        font-size: 15px;
+    }
+    .hero__texto {
+        gap: 80px;
+    }
+
+    .hero__texto .texto h1 {
+        font-size: 2.3em;
+        line-height: 50px;
+        font-family: var(--font2);
+    }
+    .hero__texto .texto p {
+        width: 90%;
+    }
+    .hero__texto .formulario {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .texto p{
+        font-size: 17px;
+    }
+    .bg-mobile{
+        display: none;
+    }
+    .section__texto {
+        gap: 200px;
+    }
+
+    .section:first-child .texto h2{
+        font-size: 2.5em;
+        position: absolute;
+        top: 10px;
+    }
+    .card {
+        width: 320px;
+        padding: 30px;
+        font-family: var(--font1);
+    }
+    .card p {
+        font-size: 15px
+    }
+    .card-texto p:last-child {
+        font-size: 10px;
+    }
+    .section:last-child .texto h2 {
+        font-size: 2em;
+    }
+    .section:last-child .texto p {
+        margin-bottom: 0;
+    }
+    .section:last-child .btn {
+        width: 40%;
+    }
+    .footer .contenedor {
+        padding: 80px 60px;
+    }
+    .footer__texto {
+        gap: 15%;
+    }
+
+    small {
+        top: 50px;
+    }
 }
